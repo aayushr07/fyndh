@@ -6,7 +6,7 @@ A single-page checkout application built with **Next.js 16 (React 19)** accompan
 
 ## 🌟 Highlights
 
-- **Next.js 16 & React 19 Frontend**: Responsive layout ([app/page.jsx](app/page.jsx), [app/layout.jsx](app/layout.jsx), [app/globals.css](app/globals.css)) with reactive state management and instant calculations.
+- **Next.js 16 & React 19 Frontend**: Responsive layout ([app/page.jsx](https://github.com/aayushr07/fyndh/blob/main/app/page.jsx), [app/layout.jsx](https://github.com/aayushr07/fyndh/blob/main/app/layout.jsx), [app/globals.css](https://github.com/aayushr07/fyndh/blob/main/app/globals.css)) with reactive state management and instant calculations.
 - **🕒 Browser History Tab & Persistent Order Storage**:
   - Automatically records all placed orders in browser `localStorage` and React state.
   - Dedicated **"🕒 Browser History"** tab displaying order references (`ORD-XXXXXX`), timestamps, customer details, item breakdowns with line totals, and grand total.
@@ -29,7 +29,7 @@ A single-page checkout application built with **Next.js 16 (React 19)** accompan
   - Starts clean on every run (no demo data).
   - Displays individual test names, pass/fail status, execution duration in milliseconds, expected vs. actual values, automatic failure screenshot capture, and a clean reset option.
 - **Authoritative CLI Playwright Suite**:
-  - 6 comprehensive tests in [tests/checkout.spec.js](tests/checkout.spec.js) executing independent checks from clean application states with customer-visible assertions and zero arbitrary sleeps.
+  - 6 comprehensive tests in [tests/checkout.spec.js](https://github.com/aayushr07/fyndh/blob/main/tests/checkout.spec.js) executing independent checks from clean application states with customer-visible assertions and zero arbitrary sleeps.
   - Includes explicit regression testing for the previously resolved CSS view visibility defect (**DEF-01**).
 
 ---
@@ -45,7 +45,8 @@ fynd/
 ├── tests/
 │   └── checkout.spec.js         # Authoritative Playwright test suite (6 specs)
 ├── scripts/
-│   └── capture-evidence.js      # Evidence runner capturing screenshots & execution logs
+│   ├── capture-evidence.js      # Evidence runner capturing screenshots & execution logs
+│   └── run-evidence-and-tests.js# Orchestrator to capture evidence and run CLI tests
 ├── evidence/                    # Captured screenshots & telemetry logs
 │   ├── 01_initial_clean_state.png
 │   ├── 02_empty_cart_details_filled.png
@@ -53,6 +54,8 @@ fynd/
 │   ├── 04_missing_name_validation.png
 │   ├── 05_cart_quantities_updated.png
 │   ├── 06_order_confirmation_single_result.png
+│   ├── 07_browser_history_view.png
+│   ├── 08_in_browser_runner_all_passed.png
 │   └── manual_test_execution_log.json
 ├── playwright.config.js         # Playwright test configuration
 ├── next.config.js               # Next.js configuration
