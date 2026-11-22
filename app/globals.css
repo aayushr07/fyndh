@@ -1301,3 +1301,82 @@ code {
   color: var(--ink-soft);
   font-size: 0.95rem;
 }
+/* =====================================================================
+   OVERRIDES — paste this at the very BOTTOM of your globals.css
+   1) removes scroll effects and page-load animations
+   2) adds a hero photo and bigger product pictures
+   ===================================================================== */
+
+/* ---- No scroll effects ---- */
+html {
+  scroll-behavior: auto;
+}
+.navbar {
+  background: var(--bg);
+  backdrop-filter: none;
+}
+.summary-column,
+.terminal-window {
+  position: static;
+}
+
+/* ---- No hover-lift / zoom / page-load animations ---- */
+.product-item:hover,
+.history-order-card:hover,
+.nav-cart-btn:hover,
+.btn-primary:hover:not(:disabled) {
+  transform: none;
+}
+.product-item:hover .product-img {
+  transform: none;
+}
+.product-img {
+  transition: none;
+}
+.alert,
+.empty-emoji,
+.confirmation-card,
+.confirmation-icon-wrap,
+.in-cart-pill {
+  animation: none;
+}
+
+/* ---- Hero with a photo ---- */
+.hero {
+  min-height: 240px;
+  align-items: center;
+  background:
+    linear-gradient(90deg,
+      rgba(255, 245, 245, 0.97) 0%,
+      rgba(255, 245, 245, 0.88) 42%,
+      rgba(247, 214, 208, 0.25) 100%),
+    url('https://unsplash.com/photos/7S7CSt3GBwE/download?w=1400') center / cover no-repeat,
+    var(--blush);
+}
+.hero-title {
+  font-size: 2.3rem;
+}
+.history-hero {
+  background:
+    linear-gradient(90deg,
+      rgba(255, 245, 245, 0.97) 0%,
+      rgba(255, 245, 245, 0.88) 50%,
+      rgba(247, 214, 208, 0.3) 100%),
+    url('https://unsplash.com/photos/1DYYLgbpp9c/download?w=1400') center / cover no-repeat,
+    var(--blush);
+}
+
+/* ---- Bigger product pictures ---- */
+.product-thumb {
+  height: 180px;
+}
+.product-img {
+  border-radius: 12px;
+}
+.cart-item-emoji {
+  width: 52px;
+  height: 52px;
+}
+.cart-item-row {
+  grid-template-columns: 52px 1fr auto;
+}
