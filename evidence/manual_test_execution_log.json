@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-11-22T09:55:29.023Z",
+  "orderHistoryLength": 1,
+  "orderRecord": {
+    "reference": "ORD-95HXLF",
+    "customerName": "Samantha Verified",
+    "customerEmail": "alex@example.com",
+    "customerNotes": "",
+    "items": [
+      {
+        "name": "Mechanical Keyboard",
+        "qty": 2,
+        "unitPrice": 500,
+        "lineTotal": 1000
+      },
+      {
+        "name": "Wireless Mouse",
+        "qty": 1,
+        "unitPrice": 300,
+        "lineTotal": 300
+      }
+    ],
+    "totalItemCount": 3,
+    "total": 1300,
+    "timestamp": "2026-11-22T09:55:28.676Z",
+    "dateFormatted": "22 Nov 2026, 3:25 pm",
+    "status": "Completed"
+  },
+  "testsExecuted": [
+    "Initial Clean State Verification",
+    "Empty Cart Checkout Block",
+    "Missing Required Field Checkout Block",
+    "Quantity Calculation: 2x ₹500 + 1x ₹300 = ₹1,300",
+    "Rapid Double-Click Submission Protection & Ref Lock",
+    "DEF-01 View Visibility Regression Check",
+    "Persistent Browser History Verification"
+  ]
+}

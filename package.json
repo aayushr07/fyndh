@@ -1,0 +1,32 @@
+{
+  "name": "mini-checkout",
+  "version": "1.0.0",
+  "description": "Mini Checkout and Browser Test Suite",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report",
+    "evidence": "node scripts/run-evidence-and-tests.js"
+  },
+  "keywords": [
+    "checkout",
+    "ecommerce",
+    "playwright",
+    "testing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.49.1"
+  },
+  "dependencies": {
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  }
+}
