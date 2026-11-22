@@ -1,7 +1,7 @@
 {
-  "name": "mini-checkout",
+  "name": "petal-checkout",
   "version": "1.0.0",
-  "description": "Mini Checkout and Browser Test Suite",
+  "description": "Petal Express Checkout and Playwright Browser Test Suite",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",

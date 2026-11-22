@@ -1,7 +1,7 @@
-# Test Plan: QuickShop Express Checkout & Authoritative Test Suite
+# Test Plan: Petal Express Checkout & Authoritative Test Suite
 
 ## 1. Executive Summary & Quality Scope
-This test plan defines the testing strategy, risk prioritization, manual exploratory records, regression verification, and automated browser test suite for the **QuickShop Single-Page Checkout** application built on **Next.js 16 (React 19)**.
+This test plan defines the testing strategy, risk prioritization, manual exploratory records, regression verification, and automated browser test suite for the **Petal Single-Page Checkout** application built on **Next.js 16 (React 19)**.
 
 The solution is verified across three complementary layers:
 1. **Interactive Next.js 16 Checkout Application**: Complete cart operations, double-click protection, persistent order history storage in `localStorage`, and a dedicated **🕒 Browser History** tab.

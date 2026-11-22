@@ -120,7 +120,7 @@ export default function CheckoutApp() {
   useEffect(() => {
     try {
       if (typeof window !== 'undefined') {
-        const saved = localStorage.getItem('quickshop_order_history');
+        const saved = localStorage.getItem('petal_order_history') || localStorage.getItem('quickshop_order_history');
         if (saved) {
           const parsed = JSON.parse(saved);
           if (Array.isArray(parsed)) {
@@ -410,7 +410,7 @@ export default function CheckoutApp() {
       const next = [orderRecord, ...prev];
       try {
         if (typeof window !== 'undefined') {
-          localStorage.setItem('quickshop_order_history', JSON.stringify(next));
+          localStorage.setItem('petal_order_history', JSON.stringify(next));
         }
       } catch (e) {
         console.warn('Could not persist order history to localStorage:', e);
@@ -431,6 +431,7 @@ export default function CheckoutApp() {
     if (typeof window !== 'undefined' && window.confirm('Are you sure you want to clear all browser order history?')) {
       setOrderHistory([]);
       try {
+        localStorage.removeItem('petal_order_history');
         localStorage.removeItem('quickshop_order_history');
       } catch (e) {}
     }
@@ -441,7 +442,7 @@ export default function CheckoutApp() {
       const next = prev.filter((o) => o.reference !== reference);
       try {
         if (typeof window !== 'undefined') {
-          localStorage.setItem('quickshop_order_history', JSON.stringify(next));
+          localStorage.setItem('petal_order_history', JSON.stringify(next));
         }
       } catch (e) {}
       return next;

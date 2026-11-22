@@ -3,7 +3,7 @@ const path = require('path');
 
 const targetUrl = process.env.TEST_URL || 'http://localhost:3000';
 
-test.describe('Mini Checkout - Playwright Browser Automation Test Suite', () => {
+test.describe('Petal - Playwright Browser Automation Test Suite', () => {
 
   // Guarantee a fresh browser page and clean isolated state for every test
   test.beforeEach(async ({ page }) => {

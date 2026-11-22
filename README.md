@@ -1,4 +1,4 @@
-# QuickShop — Next.js Checkout & Playwright Browser Test Suite
+# Petal — Express Checkout & Playwright Browser Test Suite
 
 A single-page checkout application built with **Next.js 16 (React 19)** accompanied by an authoritative Playwright browser test suite and a **live in-browser Playwright Test Runner**.
 
